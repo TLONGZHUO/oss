@@ -23,11 +23,17 @@ public class OssService {
      * 测试文件上传
      */
     public OssBaseResultDto singleUpload() {
+        try {
+            Thread.sleep(50000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         //调用userInfo获取用户信息
-        WalletBaseResultDto userResponseDto = coinClient.findOne(1L);
+//        WalletBaseResultDto userResponseDto = coinClient.findOne(1L);
         System.out.println("文件上传项目oss");
         OssBaseResultDto baseResultDto = new OssBaseResultDto();
-        baseResultDto.setDetail(userResponseDto.getDetail());
+        baseResultDto.setDetail("bbb");
+//        baseResultDto.setDetail(userResponseDto.getDetail());
         return baseResultDto;
     }
 }
