@@ -12,6 +12,7 @@
     <artifactId>api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>api</name>
+    <packaging>jar</packaging>
 
     <properties>
     </properties>
@@ -19,11 +20,5 @@
     <dependencies>
 
     </dependencies>
-
-    <build>
-        <plugins>
-
-        </plugins>
-    </build>
 
 </project>

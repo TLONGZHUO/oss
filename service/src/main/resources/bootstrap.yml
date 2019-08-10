@@ -9,7 +9,8 @@ spring:
         service-id: CONFIG-CLIENT
 
 server:
-  port: 8097
+#  port: 8097
+  port: 8087
 
 security:
   username: admin
@@ -17,8 +18,13 @@ security:
 
 eureka:
   client:
+    fetch-registry: true
+    registry-fetch-interval-seconds: 5
     serviceUrl: #注册中心的注册地址
+#      defaultZone: http://${security.username}:${security.password}@eureka-server:8761/eureka/
       defaultZone: http://${security.username}:${security.password}@localhost:8761/eureka/
       instance:
         leaseRenewalIntervalInSeconds: 10
         health-check-url-path: http://localhost:${server.port}/actuator/health
+#        health-check-url-path: http://oss-server:${server.port}/actuator/health
+
